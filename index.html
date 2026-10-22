@@ -3,52 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Consulting Solutions</title>
+    <title>Pevrel Consulting | Digital Strategy & Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
-        header { background: #2c3e50; color: #fff; padding: 2rem 0; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { margin: 10px 0 0; font-size: 1.2rem; font-weight: 300; }
-        .container { width: 80%; max-width: 1000px; margin: 2rem auto; overflow: hidden; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .services { display: flex; justify-content: space-between; margin-top: 2rem; flex-wrap: wrap; }
-        .service-box { flex-basis: 30%; background: #ecf0f1; padding: 1.5rem; text-align: center; border-radius: 5px; margin-bottom: 1rem; }
-        .service-box h3 { color: #2980b9; margin-top: 0; }
-        footer { text-align: center; padding: 1.5rem; background: #2c3e50; color: #fff; margin-top: 2rem; }
-        footer a { color: #3498db; text-decoration: none; }
+        html { scroll-behavior: smooth; }
+        .modal { transition: opacity 0.3s ease; }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Nexus Consulting</h1>
-        <p>Professional Business Strategies & Analytics</p>
-    </header>
-    <div class="container">
-        <h2>About Us</h2>
-        <p>Welcome to Nexus Consulting. We specialize in providing comprehensive analytical solutions and strategic planning for small to medium-sized enterprises. Our goal is to help your business navigate modern market challenges with data-driven insights.</p>
-        
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service-box">
-                <h3>Market Analysis</h3>
-                <p>In-depth research to identify growth opportunities and optimize your positioning.</p>
-            </div>
-            <div class="service-box">
-                <h3>Strategic Planning</h3>
-                <p>Step-by-step roadmaps designed to scale your operations efficiently.</p>
-            </div>
-            <div class="service-box">
-                <h3>Process Optimization</h3>
-                <p>Streamlining internal workflows to reduce costs and improve productivity.</p>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-bold text-2xl text-indigo-600 tracking-tight">Pevrel<span class="text-slate-800">.</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-slate-600 hover:text-indigo-600 font-medium">Services</a>
+                    <a href="#about" class="text-slate-600 hover:text-indigo-600 font-medium">About Us</a>
+                    <a href="#contact" class="text-slate-600 hover:text-indigo-600 font-medium">Contact</a>
+                </nav>
             </div>
         </div>
-        
-        <h2>Contact Us</h2>
-        <p>Ready to transform your business? Reach out to our team of experts to schedule a preliminary consultation.</p>
-        <p><strong>Email:</strong> contact@your-domain.com</p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Nexus Consulting Solutions. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-indigo-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
+                Drive Growth with <span class="text-indigo-600">Data-Driven Strategy</span>
+            </h1>
+            <p class="mt-4 text-xl text-slate-600 max-w-2xl mx-auto mb-10">
+                We empower modern businesses with comprehensive analytics, process optimization, and scalable marketing architectures.
+            </p>
+            <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition">
+                Get a Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Our Expertise</h2>
+                <p class="mt-4 text-lg text-slate-500">Tailored solutions to navigate modern market challenges.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-6 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Market Analysis</h3>
+                    <p class="text-slate-600">In-depth research and competitor analysis to identify scalable growth opportunities and optimize your positioning.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="p-8 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-6 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Process Automation</h3>
+                    <p class="text-slate-600">Streamlining internal workflows and data pipelines to reduce operational costs and improve team productivity.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="p-8 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-6 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Performance Marketing</h3>
+                    <p class="text-slate-600">Architecting high-conversion digital campaigns with rigorous A/B testing and transparent ROI reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & About -->
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 id="about" class="text-3xl font-bold mb-4">About Pevrel Consulting</h2>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    Founded with a vision to bridge the gap between raw data and actionable business strategy. We partner with forward-thinking enterprises to build resilient, scalable systems that perform in dynamic digital environments.
+                </p>
+            </div>
+            <div class="bg-slate-800 p-8 rounded-xl border border-slate-700">
+                <h3 class="text-2xl font-bold mb-4">Ready to transform?</h3>
+                <p class="text-slate-400 mb-6">Reach out to our team of experts to schedule a preliminary audit of your current business architecture.</p>
+                <div class="flex items-center space-x-3 text-indigo-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <a href="mailto:contact@pevrel.com" class="text-lg font-medium hover:text-white transition">contact@pevrel.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-8 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-4">&copy; 2026 Pevrel Consulting. All rights reserved.</p>
+            <div class="space-x-4">
+                <!-- Using buttons instead of links prevents the '#' URL bug -->
+                <button onclick="openModal('privacyModal')" class="hover:text-white transition cursor-pointer">Privacy Policy</button>
+                <span>|</span>
+                <button onclick="openModal('termsModal')" class="hover:text-white transition cursor-pointer">Terms of Service</button>
+            </div>
+        </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal fixed inset-0 z-50 hidden bg-black bg-opacity-60 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 relative">
+            <button onclick="closeModal('privacyModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Privacy Policy</h2>
+            <div class="text-slate-600 space-y-4 text-sm leading-relaxed">
+                <p>Last updated: October 2026</p>
+                <p>At Pevrel Consulting, we take your privacy seriously. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our website (pevrel.com) and our services.</p>
+                <h4 class="font-bold text-slate-800">1. Information We Collect</h4>
+                <p>We only collect information you voluntarily provide to us via email (e.g., your name, company, and contact details) when initiating a business inquiry.</p>
+                <h4 class="font-bold text-slate-800">2. How We Use Your Information</h4>
+                <p>Your data is used strictly for internal communication, drafting proposals, and delivering consulting services. We do not sell, rent, or share your data with third parties for marketing purposes.</p>
+                <h4 class="font-bold text-slate-800">3. Data Security</h4>
+                <p>We implement industry-standard security measures to protect your data. However, no method of transmission over the Internet is 100% secure.</p>
+                <p>If you have any questions about this policy, please contact us at contact@pevrel.com.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="termsModal" class="modal fixed inset-0 z-50 hidden bg-black bg-opacity-60 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 relative">
+            <button onclick="closeModal('termsModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Terms of Service</h2>
+            <div class="text-slate-600 space-y-4 text-sm leading-relaxed">
+                <p>Last updated: October 2026</p>
+                <h4 class="font-bold text-slate-800">1. Acceptance of Terms</h4>
+                <p>By accessing pevrel.com, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please refrain from using our website.</p>
+                <h4 class="font-bold text-slate-800">2. Use of Services</h4>
+                <p>Pevrel Consulting provides strategic business advice and analytics. All content on this site is for informational purposes only. Specific project deliverables are governed by separate master service agreements.</p>
+                <h4 class="font-bold text-slate-800">3. Intellectual Property</h4>
+                <p>All content, original design, and branding on this website are the property of Pevrel Consulting and are protected by international copyright laws.</p>
+                <h4 class="font-bold text-slate-800">4. Limitation of Liability</h4>
+                <p>Pevrel Consulting shall not be liable for any indirect, incidental, or consequential damages resulting from the use of our website or initial consultations.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Logic -->
+    <script>
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('hidden');
+            // Restore background scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the white box
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
 </body>
 </html>
