@@ -148,29 +148,42 @@
         </div>
     </div>
 
-    <!-- Modal Logic -->
+<!-- Modal and Scroll Logic -->
     <script>
+        // Modal Logic
         function openModal(id) {
             const modal = document.getElementById(id);
             modal.classList.remove('hidden');
-            // Prevent background scrolling
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal(id) {
             const modal = document.getElementById(id);
             modal.classList.add('hidden');
-            // Restore background scrolling
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside the white box
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 event.target.classList.add('hidden');
                 document.body.style.overflow = 'auto';
             }
         }
+
+        // Clean Scroll Logic (No # in URL)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Зупиняє стандартну зміну URL
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
